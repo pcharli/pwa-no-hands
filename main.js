@@ -24,7 +24,7 @@ document.addEventListener('touchend', function(event) {
 
     if (startX - endX > 50 && Math.abs(startY - endY) < 20) {
         // Le geste est un swipe vers la gauche
-        console.log("Swipe vers la gauche détecté");
+        alert("Swipe vers la gauche détecté");
     }
 });
 
