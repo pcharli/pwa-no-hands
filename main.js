@@ -6,15 +6,15 @@ const pages = [
 
 setTimeout(e => {
     document.querySelector('body').classList.remove('hidden')
-}, 500)
+}, 0)
 
 let url_active = document.location.href
 let segments = url_active.split('/')
 let lastSegment = segments[segments.length - 1];
 let page_active = lastSegment
-console.log('page active : ' + page_active)
+//console.log('page active : ' + page_active)
 let pageIndex = pages.indexOf(page_active)
-console.log('page index : ' + pageIndex)
+//console.log('page index : ' + pageIndex)
 let pageNext = null
 let pagePrevious = null
 switch(pageIndex) {
@@ -31,8 +31,8 @@ switch(pageIndex) {
     pagePrevious = pages[pageIndex-1]
 }
 
-console.log('previous : ' + pagePrevious)
-console.log("Next : " + pageNext)
+//console.log('previous : ' + pagePrevious)
+//console.log("Next : " + pageNext)
 
 //* Swipe
 let startX; // Coordonnée X du point de départ du geste
@@ -44,8 +44,8 @@ document.addEventListener('touchstart', function(event) {
 });
 
 document.addEventListener('touchend', function(event) {
-    var endX = event.changedTouches[0].clientX;
-    var endY = event.changedTouches[0].clientY;
+    let endX = event.changedTouches[0].clientX;
+    let endY = event.changedTouches[0].clientY;
 
     if (startX - endX > 50 && Math.abs(startY - endY) < 20 && pageNext) {
         // Le geste est un swipe vers la gauche
