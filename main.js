@@ -75,15 +75,15 @@ function handleOrientation(event) {
 
   alert('gamma : ' + gamma)
   alert('beta' + beta)
-  if(gamma >= 80 && pageNext) {
+  if(gamma <= -50 && pageNext) {
     alert('page next')
     //document.location.href = pageNext
   }
-  if(gamma <= -80 && pagePrevious) {
+  if(gamma >= 50 && pagePrevious) {
     alert('page previous')
     //document.location.href = pagePrevious
   }
-  if(beta >= 90) {
+  if(beta <= -30) {
     window.scrollBy(0,500)
   }
 
