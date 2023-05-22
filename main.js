@@ -73,8 +73,8 @@ function handleOrientation(event) {
   var beta = event.beta; // Inclinaison en degrés par rapport à l'axe X
   var gamma = event.gamma; // Inclinaison en degrés par rapport à l'axe Y
 
-  alert('gamma : ' + gamma)
-  alert('beta' + beta)
+  //alert('gamma : ' + gamma)
+  //alert('beta' + beta)
   if(gamma <= -50 && pageNext) {
     alert('page next')
     //document.location.href = pageNext
