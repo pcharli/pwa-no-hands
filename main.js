@@ -76,7 +76,7 @@ function handleOrientation(event) {
     alert('page next')
     document.location.href = pageNext
   }
-  if(gamma <= -80 &&pagePrevious) {
+  if(gamma <= -80 && pagePrevious) {
     alert('page previous')
     document.location.href = pagePrevious
   }
