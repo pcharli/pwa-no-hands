@@ -4,6 +4,10 @@ const pages = [
     "a-propos.html"
 ]
 
+setTimeout(e => {
+    document.querySelector('body').classList.remove('hidden')
+}, 500)
+
 let url_active = document.location.href
 let segments = url_active.split('/')
 let lastSegment = segments[segments.length - 1];
