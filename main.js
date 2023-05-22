@@ -78,6 +78,9 @@ function handleOrientation(event) {
   if(gamma <= -80) {
     alert('page previous')
   }
+  if(beta >= 90) {
+    window.scrollBy(0,500)
+  }
 
   // Faites quelque chose avec les valeurs d'orientation
   console.log('Alpha:', alpha);
