@@ -7,7 +7,9 @@ const pages = [
 let url_active = document.location.href
 let page_active = url_active.replace("http://localhost:5500/", "")
 page_active = url_active.replace("https://pwa-no-hands.netlify.app", "")
+console.log('page active : ' + page_active)
 let pageIndex = pages.indexOf(page_active)
+console.log('page index : ' + pageIndex)
 let pageNext = null
 let pagePrevious = null
 switch(pageIndex) {
