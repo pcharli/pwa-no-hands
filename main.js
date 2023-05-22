@@ -6,8 +6,25 @@ const pages = [
 
 let url_active = document.location.href
 let page_active = url_active.replace("http://localhost:5500/", "")
+let pageIndex = pages.indexOf(page_active)
+let pageNext = null
+let pagePrevious = null
+switch(pageIndex) {
+    case 0 :
+        pageNext = pages[pageIndex+1]
+        pagePrevious = null
+        break
+    case pages.length-1 :
+        pageNext = null
+        pagePrevious = pages[pageIndex-1]
+        break
+    default :
+    pageNext = pages[pageIndex+1]
+    pagePrevious = pages[pageIndex-1]
+}
 
-console.log(page_active)
+console.log('previous : ' + pagePrevious)
+console.log("Next : " + pageNext)
 
 //* Swipe
 let startX; // Coordonnée X du point de départ du geste
@@ -22,12 +39,14 @@ document.addEventListener('touchend', function(event) {
     var endX = event.changedTouches[0].clientX;
     var endY = event.changedTouches[0].clientY;
 
-    if (startX - endX > 50 && Math.abs(startY - endY) < 20) {
+    if (startX - endX > 50 && Math.abs(startY - endY) < 20 && pagePrevious) {
         // Le geste est un swipe vers la gauche
-        alert("Swipe vers la gauche détecté")
+        //alert("Swipe vers la gauche détecté")
+        document.location.href = pagePrevious
     }
-    else if (endX - startX > 50 && Math.abs(startY - endY) < 20) {
-        alert("Swipe vers la droite détecté")
+    else if (endX - startX > 50 && Math.abs(startY - endY) < 20 && pageNext) {
+        //alert("Swipe vers la droite détecté")
+        document.location.href = pageNext
     }
 });
 
