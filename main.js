@@ -72,13 +72,16 @@ function handleOrientation(event) {
   var alpha = event.alpha; // Orientation en degrés par rapport à l'axe Z
   var beta = event.beta; // Inclinaison en degrés par rapport à l'axe X
   var gamma = event.gamma; // Inclinaison en degrés par rapport à l'axe Y
+
+  alert('gamma : ' + gamma)
+  alert('beta' + beta)
   if(gamma >= 80 && pageNext) {
     alert('page next')
-    document.location.href = pageNext
+    //document.location.href = pageNext
   }
   if(gamma <= -80 && pagePrevious) {
     alert('page previous')
-    document.location.href = pagePrevious
+    //document.location.href = pagePrevious
   }
   if(beta >= 90) {
     window.scrollBy(0,500)
