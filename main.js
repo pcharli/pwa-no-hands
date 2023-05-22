@@ -73,7 +73,10 @@ function handleOrientation(event) {
   var beta = event.beta; // Inclinaison en degrés par rapport à l'axe X
   var gamma = event.gamma; // Inclinaison en degrés par rapport à l'axe Y
   if(beta >= 80) {
-    alert('change de page')
+    alert('page previous')
+  }
+  if(beta <= -80) {
+    alert('page next')
   }
 
   // Faites quelque chose avec les valeurs d'orientation
