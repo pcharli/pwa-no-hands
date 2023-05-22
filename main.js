@@ -6,6 +6,7 @@ const pages = [
 
 let url_active = document.location.href
 let page_active = url_active.replace("http://localhost:5500/", "")
+page_active = url_active.replace("https://pwa-no-hands.netlify.app", "")
 let pageIndex = pages.indexOf(page_active)
 let pageNext = null
 let pagePrevious = null
