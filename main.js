@@ -43,14 +43,14 @@ document.addEventListener('touchend', function(event) {
     var endX = event.changedTouches[0].clientX;
     var endY = event.changedTouches[0].clientY;
 
-    if (startX - endX > 50 && Math.abs(startY - endY) < 20 && pagePrevious) {
+    if (startX - endX > 50 && Math.abs(startY - endY) < 20 && pageNext) {
         // Le geste est un swipe vers la gauche
         //alert("Swipe vers la gauche détecté")
-        document.location.href = pagePrevious
-    }
-    else if (endX - startX > 50 && Math.abs(startY - endY) < 20 && pageNext) {
-        //alert("Swipe vers la droite détecté")
         document.location.href = pageNext
+    }
+    else if (endX - startX > 50 && Math.abs(startY - endY) < 20 && pagePrevious) {
+        //alert("Swipe vers la droite détecté")
+        document.location.href = pagePrevious
     }
 });
 
