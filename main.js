@@ -58,10 +58,12 @@ document.addEventListener('touchend', function(event) {
 
 /* test scroll */
 const linkScroll = document.querySelector('.scroll a')
+if(linkScroll) {
 linkScroll.addEventListener('click', e => {
     e.preventDefault()
     window.scrollBy(0,500)
 }) 
+}
 
 // end test scroll
 
@@ -84,7 +86,7 @@ function handleOrientation(event) {
     //document.location.href = pagePrevious
   }
   if(beta <= -30) {
-    window.scrollBy(0,500)
+    window.scrollBy(0,250)
   }
 
   // Faites quelque chose avec les valeurs d'orientation
