@@ -91,9 +91,4 @@ function handleOrientation(event) {
   if(beta >= 30) {
     window.scrollBy(0,-250)
   }
-
-  // Faites quelque chose avec les valeurs d'orientation
-  console.log('Alpha:', alpha);
-  console.log('Beta:', beta);
-  console.log('Gamma:', gamma);
 }
