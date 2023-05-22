@@ -86,9 +86,9 @@ function handleOrientation(event) {
     document.location.href = pagePrevious
   }
   if(beta <= -30) {
-    window.scrollBy(0,250)
+    window.scrollBy(0,150)
   }
   if(beta >= 30) {
-    window.scrollBy(0,-250)
+    window.scrollBy(0,-150)
   }
 }
