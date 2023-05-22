@@ -72,10 +72,10 @@ function handleOrientation(event) {
   var alpha = event.alpha; // Orientation en degrés par rapport à l'axe Z
   var beta = event.beta; // Inclinaison en degrés par rapport à l'axe X
   var gamma = event.gamma; // Inclinaison en degrés par rapport à l'axe Y
-  if(beta >= 60) {
+  if(alpha >= 60) {
     alert('page previous')
   }
-  if(beta <= -60) {
+  if(alpha <= -60) {
     alert('page next')
   }
 
