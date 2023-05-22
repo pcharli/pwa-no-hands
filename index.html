@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No hands - accueil</title>
     <script defer src="main.js"></script>
+    <style>
+        .scroll {
+            position: fixed;
+            z-index: 7;
+            background-color: white;
+            padding: 1rem;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,6 +27,7 @@
         </nav>
     </header>
     <main>
+        <p class="scroll"><a href="#">Scroll</a></p>
         <h1>Accueil</h1>
         <p>Dans cet exemple, nous utilisons window.location.href pour obtenir l'URL complète de la page. Ensuite, nous utilisons split('/') pour diviser l'URL en segments en utilisant le caractère / comme séparateur. Le dernier segment est extrait à l'aide de segments[segments.length - 1]. Ensuite, nous utilisons split('.') pour diviser le dernier segment en fonction du point (.) afin de séparer le nom du fichier et l'extension. Nous récupérons le nom du fichier en utilisant lastSegment.split('.')[0].</p>
 

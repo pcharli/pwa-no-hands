@@ -55,3 +55,29 @@ document.addEventListener('touchend', function(event) {
 });
 
 //* end swipe
+
+/* test scroll */
+const linkScroll = document.querySelector('.scroll a')
+linkScroll.addEventListener('click', e => {
+    e.preventDefault()
+    window.scrollBy(0,500)
+}) 
+
+// end test scroll
+
+// test deviceorientation
+window.addEventListener('deviceorientation', handleOrientation);
+
+function handleOrientation(event) {
+  var alpha = event.alpha; // Orientation en degrés par rapport à l'axe Z
+  var beta = event.beta; // Inclinaison en degrés par rapport à l'axe X
+  var gamma = event.gamma; // Inclinaison en degrés par rapport à l'axe Y
+  if(beta >= 80) {
+    alert('change de page')
+  }
+
+  // Faites quelque chose avec les valeurs d'orientation
+  console.log('Alpha:', alpha);
+  console.log('Beta:', beta);
+  console.log('Gamma:', gamma);
+}
