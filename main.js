@@ -78,15 +78,18 @@ function handleOrientation(event) {
   //alert('gamma : ' + gamma)
   //alert('beta' + beta)
   if(gamma <= -50 && pageNext) {
-    alert('page next')
-    //document.location.href = pageNext
+    //alert('page next')
+    document.location.href = pageNext
   }
   if(gamma >= 50 && pagePrevious) {
-    alert('page previous')
-    //document.location.href = pagePrevious
+    //alert('page previous')
+    document.location.href = pagePrevious
   }
   if(beta <= -30) {
     window.scrollBy(0,250)
+  }
+  if(beta >= 30) {
+    window.scrollBy(0,-250)
   }
 
   // Faites quelque chose avec les valeurs d'orientation
