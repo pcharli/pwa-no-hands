@@ -45,6 +45,12 @@ document.addEventListener('touchstart', function(event) {
 
 });
 
+document.addEventListener('touchmove', function(event) {
+    document.querySelector('body').style.marginLeft -= 1+"px"
+
+});
+ 
+
 document.addEventListener('touchend', function(event) {
     let endX = event.changedTouches[0].clientX;
     let endY = event.changedTouches[0].clientY;
