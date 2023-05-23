@@ -27,8 +27,8 @@ switch(pageIndex) {
         pagePrevious = pages[pageIndex-1]
         break
     default :
-    pageNext = pages[pageIndex+1]
-    pagePrevious = pages[pageIndex-1]
+        pageNext = pages[pageIndex+1]
+        pagePrevious = pages[pageIndex-1]
 }
 
 //console.log('previous : ' + pagePrevious)
@@ -40,6 +40,7 @@ let startY; // Coordonnée Y du point de départ du geste
 let i = 0
 
 document.addEventListener('touchstart', function(event) {
+    console.log(event)
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
     
@@ -85,16 +86,7 @@ document.addEventListener('touchend', function(event) {
 
 //* end swipe
 
-/* test scroll */
-const linkScroll = document.querySelector('.scroll a')
-if(linkScroll) {
-linkScroll.addEventListener('click', e => {
-    e.preventDefault()
-    window.scrollBy(0,500)
-}) 
-}
 
-// end test scroll
 
 // test deviceorientation
 window.addEventListener('deviceorientation', handleOrientation);
