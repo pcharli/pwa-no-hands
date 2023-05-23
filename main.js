@@ -37,22 +37,25 @@ switch(pageIndex) {
 //* Swipe
 let startX; // Coordonnée X du point de départ du geste
 let startY; // Coordonnée Y du point de départ du geste
+let i = 0
 
 document.addEventListener('touchstart', function(event) {
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
-    document.querySelector('body').style.opacity = 0.5
+    
 
 });
 
 document.addEventListener('touchmove', function(event) {
-    document.querySelector('body').style.marginLeft -= 1+"px"
+    document.querySelector('body').style.opacity = 0.5
+    document.querySelector('body').style.color = 'red'
 
 });
  
 
 document.addEventListener('touchend', function(event) {
     document.querySelector('body').style.opacity = 1
+    document.querySelector('body').style.color = 'black'
     let endX = event.changedTouches[0].clientX;
     let endY = event.changedTouches[0].clientY;
 
