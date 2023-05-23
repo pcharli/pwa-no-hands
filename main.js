@@ -49,6 +49,16 @@ document.addEventListener('touchstart', function(event) {
 document.addEventListener('touchmove', function(event) {
     document.querySelector('body').style.opacity = 0.5
     document.querySelector('body').style.color = 'red'
+    let changeX = event.changedTouches[0].clientX
+    if (changeX > startX) {
+        console.log('droite')
+        document.querySelector('.droite').classList.remove('hidden')
+        document.querySelector('.gauche').classList.add('hidden')
+    } else {
+         console.log('gauche')
+         document.querySelector('.gauche').classList.remove('hidden')
+         document.querySelector('.droite').classList.add('hidden')
+    }
 
 });
  

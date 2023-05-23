@@ -6,3 +6,14 @@ body {
     opacity:0;
     
 }
+.direction {
+    position: fixed;
+    top: 250px;
+    padding: 1rem;
+    background: rgb(255,255,255,.7);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.droite {
+    right: 0;
+}
