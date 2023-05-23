@@ -41,6 +41,8 @@ let startY; // Coordonnée Y du point de départ du geste
 document.addEventListener('touchstart', function(event) {
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
+    document.querySelector('body').style.opacity = 0.5
+
 });
 
 document.addEventListener('touchend', function(event) {
