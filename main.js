@@ -52,6 +52,7 @@ document.addEventListener('touchmove', function(event) {
  
 
 document.addEventListener('touchend', function(event) {
+    document.querySelector('body').style.opacity = 1
     let endX = event.changedTouches[0].clientX;
     let endY = event.changedTouches[0].clientY;
 
